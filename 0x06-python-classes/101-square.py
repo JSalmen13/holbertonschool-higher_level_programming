@@ -70,6 +70,7 @@ class Square:
         if not isinstance(value[1], int) or value[1] < 0:
             raise TypeError(error)
         self.__position = value
+
     def __str__(self):
         print = ""
         if self.__size == 0:

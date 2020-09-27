@@ -18,12 +18,12 @@ b must be an integer
 ...     print(e)
 a must be an integer
 >>> try:
-...     print(add_integer("war zone"))
+...     print(add_integer(float('overflow'), 5)
 ... except Exception as e:
 ...     print(e)
 a must be an integer
 >>> try:
-...     print(add_integer(12 ,"war zone"))
+...     add_integer(float('NaN'), 5)
 ... except Exception as e:
 ...     print(e)
 b must be an integer

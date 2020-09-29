@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
 text indention function
-text is the string to be treated 
+text is the string to be treated
 """
+
 
 def text_indentation(text):
     """ text indention function

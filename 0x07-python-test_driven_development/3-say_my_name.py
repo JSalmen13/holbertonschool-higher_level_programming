@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-Print name 
-first_name is the fitst name 
+Print name
+first_name is the fitst name
 last_name is the lasst name
 """
 
+
 def say_my_name(first_name, last_name=""):
-    """ Print name 
-    first_name is the fitst name 
+    """ Print name
+    first_name is the fitst name
     last_name is the lasst name"""
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")

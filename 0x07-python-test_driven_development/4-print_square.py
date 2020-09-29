@@ -4,6 +4,7 @@ print square
 size is the square size
 """
 
+
 def print_square(size):
     """print square
     size is the square size"""

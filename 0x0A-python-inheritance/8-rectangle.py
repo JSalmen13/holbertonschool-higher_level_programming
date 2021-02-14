@@ -6,7 +6,9 @@ add class
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle"""
+    """
+    Rectangle
+    """
     def __init__(self, width, height):
         """
         init class

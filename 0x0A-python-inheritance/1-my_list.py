@@ -8,14 +8,8 @@ class MyList(list):
     """
     a new class from list
     """
-    def print_sorted(self):
+   def print_sorted(self):
         """
-        print sorted list
+        prints sorted list
         """
-        print(sorted(self))
-
-    def __str__(self):
-        """
-        returns the list
-        """
-        return (str(list(self)))
+        return(print(sorted(self)))

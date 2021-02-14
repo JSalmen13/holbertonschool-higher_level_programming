@@ -1,0 +1,15 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 420)
+>>> bg.integer_validator("width", 69)
+>>> bg.integer_validator(“age”, None)
+File "<stdin>", line 1
+  bg.integer_validator(“age”, None)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+        compileflags, 1), test.globs)
+      File "<doctest 7-base_geometry.txt[4]>", line 1
+        bg.integer_validator(“age”, None)
+                                 ^
+    SyntaxError: invalid character in identifier

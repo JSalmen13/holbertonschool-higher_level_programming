@@ -5,11 +5,40 @@
 >>> bg.integer_validator(“age”, None)
 File "<stdin>", line 1
   bg.integer_validator(“age”, None)
-Exception raised:
-    Traceback (most recent call last):
-      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
-        compileflags, 1), test.globs)
-      File "<doctest 7-base_geometry.txt[4]>", line 1
-        bg.integer_validator(“age”, None)
-                                 ^
-    SyntaxError: invalid character in identifier
+                       ^
+SyntaxError: invalid syntax
+>>> bg.integer_validator(“age”, (4,))
+File "<stdin>", line 1
+  bg.integer_validator(“age”, (4,))
+                       ^
+SyntaxError: invalid syntax
+>>> bg.integer_validator(“age”, [3])
+File "<stdin>", line 1
+  bg.integer_validator(“age”, (4,))
+                       ^
+SyntaxError: invalid syntax
+>>> bg.integer_validator(“age”, True)
+File "<stdin>", line 1
+  bg.integer_validator(“age”, (4,))
+                       ^
+SyntaxError: invalid syntax
+>>> bg.integer_validator(“age”, {3, 4})
+File "<stdin>", line 1
+  bg.integer_validator(“age”, (4,))
+                       ^
+SyntaxError: invalid syntax
+>>> try:
+...     bg.integer_validator("last_name", "Mechken")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] last_name must be an integer
+>>> try:
+...     bg.integer_validator("time", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] time must be greater than 0
+>>> try:
+...     bg.integer_validator("height", -10)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] height must be greater than 0
